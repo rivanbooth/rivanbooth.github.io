@@ -1,0 +1,190 @@
+---
+layout: default
+---
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow">{{ site.affiliation }}</p>
+        <h1>{{ site.title }}</h1>
+        <p class="hero-tag">{{ site.tagline }}</p>
+        <p class="hero-sub">{{ site.intro }}</p>
+        <div class="hero-cta">
+          <a class="btn green" href="#research">What I work on</a>
+          <a class="btn" href="{{ site.cv | relative_url }}">Download CV</a>
+        </div>
+      </div>
+      <figure class="hero-photo" id="photo-fig">
+        <img id="rand-photo" alt="Robert I. Booth" width="220" height="330" loading="eager">
+        <figcaption class="photo-credit" id="photo-credit" hidden></figcaption>
+      </figure>
+    </div>
+
+    <figure class="derivation" aria-label="A diagrammatic derivation: three CNOT gates rewritten step by step in the ZX-calculus into a swap of two wires">
+      <div class="derivation-scroll">
+        {% include derivation.svg %}
+      </div>
+      <figcaption>three CNOTs = one swap, one rewrite at a time</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div>
+      <h2>{% include spider.html colour="green" %} About</h2>
+      <p>{{ site.data.prose.about_1 }}</p>
+      <p>{{ site.data.prose.about_2 }}</p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1.1rem">Academic path</p>
+      <div class="path">
+        {% for item in site.data.path %}
+        <div class="path-item{% if item.accent == 'red' %} alt{% endif %}">
+          <span class="path-date">{{ item.date }}</span>
+          <strong>{{ item.role }}</strong>
+          <span>{{ item.detail }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <h2>{% include spider.html colour="red" %} News</h2>
+    <ul class="news">
+      {% for item in site.data.news %}
+      <li><time>{{ item.date }}</time><div>{{ item.body }}</div></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>{% include spider.html colour="both" %} Research</h2>
+    <p class="research-lede">{{ site.data.prose.research_lede }}</p>
+
+    <div class="themes">
+      {% for card in site.data.research %}
+      <article class="theme">
+        <div class="icon">{% include icon.html name=card.icon %}</div>
+        <h3>{{ card.title }}</h3>
+        <p class="q">{{ card.question }}</p>
+        <p>{{ card.body }}</p>
+        {% if card.subobjectives %}
+        <div class="subs">
+          {% for sub in card.subobjectives %}
+          <div class="sub{% unless sub.done %} is-open{% endunless %}">
+            <span class="mk {% if sub.done %}done{% else %}open{% endif %}"></span>
+            <span class="t">{{ sub.text }}</span>
+            <span class="meta">
+              {%- if sub.refs -%}
+                {%- for ref in sub.refs -%}
+                  {%- unless forloop.first %} · {% endunless -%}
+                  <a href="#pub-{{ ref.id }}">{{ ref.label }}</a>
+                {%- endfor -%}
+              {%- else -%}
+                <span class="tag">open</span>
+              {%- endif -%}
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+
+    <p class="earlier">{{ site.data.prose.earlier_work }}</p>
+    <p class="fits-cap" style="margin-top:2.2rem">{{ site.data.prose.long_game }}</p>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>{% include spider.html colour="red" %} Publications</h2>
+
+    {% include filter.html id="pubfilter" prefix="pf" placeholder="Search titles, authors, venues…" label="publications" %}
+
+    {% capture me %}<b>{{ site.title }}</b>{% endcapture %}
+    {% assign groups = "peer-reviewed,preprint" | split: "," %}
+    {% for g in groups %}
+    <div class="pub-group">
+      <p class="eyebrow" style="margin-bottom:.6rem">{% if g == "peer-reviewed" %}Peer-reviewed{% else %}Preprints{% endif %}</p>
+      {% for pub in site.data.publications %}{% if pub.status == g %}
+      <div class="pub"{% if pub.id %} id="pub-{{ pub.id }}"{% endif %}{% if pub.tags %} data-kw="{{ pub.tags | join: ' ' }}"{% endif %}>
+        <span class="venue">{{ pub.venue }}</span>
+        <h3><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
+        <p class="authors">{{ pub.authors | replace: site.title, me }}</p>
+        {% if pub.blurb %}<p class="blurb">{{ pub.blurb }}</p>{% endif %}
+      </div>
+      {% endif %}{% endfor %}
+    </div>
+    {% endfor %}
+
+    <p class="muted" style="font-size:.9rem">Also on
+      {% for l in site.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}.
+    </p>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <h2>{% include spider.html colour="green" %} Talks</h2>
+
+    {% include filter.html id="talkfilter" prefix="tf" placeholder="Search talks, venues…" label="talks" %}
+
+    <div id="talklist">
+      {% for talk in site.data.talks %}
+      <div class="talk"{% if talk.tags %} data-kw="{{ talk.tags | join: ' ' }}"{% endif %}>
+        <time>{{ talk.date }}</time>
+        <div><strong>{{ talk.title }}</strong>
+          <div class="where">{{ talk.venue }}{% if talk.slides %} · <a href="{{ '/pdfs/slides/' | append: talk.slides | relative_url }}">slides</a>{% endif %}{% if talk.video %} · <a href="{{ talk.video }}">video</a>{% elsif talk.video_pending %} · <span class="novideo" title="recording exists — link to be added">video</span>{% endif %}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="talk-more"><button type="button" id="tf-more" hidden></button></p>
+    <p class="muted" style="margin-top:1.4rem;font-size:.92rem">{{ site.data.prose.talks_note }}</p>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap teach-grid">
+    <div>
+      <h2>{% include spider.html colour="red" %} Teaching &amp; service</h2>
+      <p>{{ site.data.prose.teaching_1 }}</p>
+      <p>{{ site.data.prose.teaching_2 }}</p>
+      <p style="margin-top:1.2rem" class="muted">{{ site.data.prose.service }}</p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1rem">Students supervised</p>
+      <ul class="students">
+        {% for s in site.data.students %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+      <p class="muted" style="margin-top:1.2rem;font-size:.92rem">{{ site.data.prose.students_note }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>{% include spider.html colour="green" %} Get in touch</h2>
+      <p><strong>{{ site.title }}</strong><br>
+        {% for line in site.contact.lines %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
+      <p style="margin-top:1rem"><button id="email-btn" type="button">Click to reveal email</button></p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1rem">Elsewhere</p>
+      <div class="contact-links">
+        {% for l in site.links %}<a class="btn" href="{{ l.url }}">{{ l.name }}</a>{% endfor %}
+        <a class="btn" href="{{ site.cv | relative_url }}">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>

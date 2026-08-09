@@ -1,0 +1,127 @@
+# Publications. Newest first within each status.
+# id: referenced by _data/research.yml subobjectives (refs:) — keep unique
+# status: peer-reviewed | preprint
+
+- id: stabsem
+  title: "Denotational semantics for stabiliser quantum programs"
+  authors: "Robert I. Booth, Cole Comfort"
+  venue: "FSCD 2026"
+  url: "https://arxiv.org/abs/2511.22734"
+  blurb: "What stabiliser quantum programs mean, compositionally."
+  tags: [semantics, stabiliser, faulttol]
+  status: peer-reviewed
+
+- id: gsa
+  title: "Graphical Symplectic Algebra"
+  authors: "Robert I. Booth, Titouan Carette, Cole Comfort"
+  venue: "FSCD 2026"
+  url: "http://arxiv.org/abs/2401.07914"
+  blurb: "A graphical calculus built on symplectic structure, spanning stabiliser and Gaussian quantum mechanics."
+  tags: [graphical, algebra, stabiliser, cv]
+  status: peer-reviewed
+
+- id: bosonic
+  title: "Effective descriptions of bosonic systems can be considered complete"
+  authors: "Francesco Arzani, Robert I. Booth, Ulysse Chabaud"
+  venue: "Nature Communications · 2025"
+  url: "https://www.nature.com/articles/s41467-025-64872-3"
+  blurb: "Finite effective descriptions capture everything operationally accessible about bosonic systems."
+  tags: [cv]
+  status: peer-reviewed
+
+- id: cvflow
+  title: "Flow conditions for continuous variable measurement-based quantum computing"
+  authors: "Robert I. Booth, Damian Markham"
+  venue: "Quantum · 2023"
+  url: "https://quantum-journal.org/papers/q-2023-10-19-1146/"
+  blurb: "When continuous-variable measurement patterns define deterministic computations."
+  tags: [mbqc, cv]
+  status: peer-reviewed
+
+- id: zxtravaganza
+  title: "The Qupit Stabiliser ZX-travaganza: Simplified Axioms, Normal Forms and Graph-Theoretic Simplification"
+  authors: "Boldizsár Poór, Robert I. Booth, Titouan Carette, John van de Wetering, Lia Yeh"
+  venue: "QPL 2023"
+  url: "https://eptcs.web.cse.unsw.edu.au/paper.cgi?QPL2023.13"
+  blurb: "A toolkit of results for qudit stabiliser ZX-calculus in odd prime dimensions."
+  tags: [graphical, stabiliser]
+  status: peer-reviewed
+
+- id: qudit-det
+  title: "Outcome determinism in measurement-based quantum computation with qudits"
+  authors: "Robert I. Booth, Aleks Kissinger, Damian Markham, Clément Meignant, Simon Perdrix"
+  venue: "J. Phys. A · 2023"
+  url: "https://dx.doi.org/10.1088/1751-8121/acbace"
+  blurb: "Generalising flow-based determinism to qudit measurement-based computation."
+  tags: [mbqc, stabiliser]
+  status: peer-reviewed
+
+- id: wigner
+  title: "Contextuality and Wigner negativity are equivalent for continuous-variable quantum measurements"
+  authors: "Robert I. Booth, Ulysse Chabaud, Pierre-Emmanuel Emeriau"
+  venue: "Phys. Rev. Lett. · 2022"
+  url: "http://arxiv.org/abs/2111.13218"
+  blurb: "Two central notions of quantumness coincide in the continuous-variable setting."
+  tags: [cv]
+  status: peer-reviewed
+
+- id: zx-odd
+  title: "Complete ZX-Calculi for the Stabiliser Fragment in Odd Prime Dimensions"
+  authors: "Robert I. Booth, Titouan Carette"
+  venue: "MFCS 2022"
+  url: "https://drops.dagstuhl.de/opus/volltexte/2022/16822"
+  blurb: "Complete equational theories for qudit stabiliser quantum mechanics."
+  tags: [graphical, stabiliser]
+  status: peer-reviewed
+
+- id: null
+  title: "Bridging thermodynamics and metrology in nonequilibrium quantum thermometry"
+  authors: "Vasco Cavina, Luca Mancino, Antonella De Pasquale, Ilaria Gianani, Marco Sbroscia, Robert I. Booth, Emanuele Roccia, Roberto Raimondi, Vittorio Giovannetti, Marco Barbieri"
+  venue: "Phys. Rev. A · 2018"
+  url: "https://link.aps.org/doi/10.1103/PhysRevA.98.050101"
+  tags: []
+  status: peer-reviewed
+
+- id: null
+  title: "Geometrical Bounds on Irreversibility in Open Quantum Systems"
+  authors: "Luca Mancino, Vasco Cavina, Antonella De Pasquale, Marco Sbroscia, Robert I. Booth, Emanuele Roccia, Ilaria Gianani, Vittorio Giovannetti, Marco Barbieri"
+  venue: "Phys. Rev. Lett. · 2018"
+  url: "https://link.aps.org/doi/10.1103/PhysRevLett.121.160602"
+  tags: []
+  status: peer-reviewed
+
+- id: instruments
+  title: "Composing Quantum Instruments"
+  authors: "Robert I. Booth, Dominik Leichtle, Alex Rice, Kim Worrall"
+  venue: "arXiv:2606.28291"
+  url: "https://arxiv.org/abs/2606.28291"
+  blurb: "The compositional structure of quantum operations with classical input and output."
+  tags: [semantics, algebra]
+  status: preprint
+
+- id: orchestras
+  title: "Quantum Orchestras: a Concrete Semantics for Recursive Hybrid Programs"
+  authors: "Alex Rice, Dominik Leichtle, Kim Worrall, Robert I. Booth"
+  venue: "arXiv:2607.09605"
+  url: "https://arxiv.org/abs/2607.09605"
+  blurb: "Concrete semantics for recursive hybrid quantum–classical programs."
+  tags: [semantics]
+  status: preprint
+
+- id: surgery
+  title: "Engineering CSS surgery: compiling any CNOT in any code"
+  authors: "Clément Poirson, Joschka Roffe, Robert I. Booth"
+  venue: "arXiv:2505.01370"
+  url: "https://arxiv.org/abs/2505.01370"
+  blurb: "Generalised surgery implementing entangling logical gates between arbitrary CSS codes."
+  tags: [faulttol, algebra]
+  status: preprint
+
+- id: gaussian
+  title: "Complete equational theories for classical and quantum Gaussian relations"
+  authors: "Robert I. Booth, Titouan Carette, Cole Comfort"
+  venue: "arXiv:2403.10479"
+  url: "http://arxiv.org/pdf/2403.10479"
+  blurb: "A complete graphical calculus for the Gaussian, continuous-variable world."
+  tags: [graphical, algebra, cv]
+  status: preprint

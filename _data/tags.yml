@@ -1,0 +1,13 @@
+# Chip labels. Key = the token used in tags: [...] ; value = what visitors see.
+# Add a line here whenever you invent a new tag.
+
+faulttol: "fault tolerance"
+graphical: "graphical calculi"
+algebra: "algebra"
+stabiliser: "stabiliser & qudits"
+semantics: "semantics"
+mbqc: "measurement-based"
+cv: "continuous variables"
+conference: "conference"
+workshop: "workshop"
+seminar: "seminar"

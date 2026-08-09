@@ -1,0 +1,15 @@
+{%- comment -%}
+Search box + keyword chips. Usage:
+{% include filter.html id="pubfilter" prefix="pf" placeholder="…" label="publications" %}
+{%- endcomment -%}
+<div id="{{ include.id }}" hidden>
+  <div class="pf-row">
+    <label class="pf-search">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.4 10.4 L14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="search" id="{{ include.prefix }}-q" placeholder="{{ include.placeholder }}" aria-label="Search {{ include.label }}" autocomplete="off">
+    </label>
+    <span class="pf-count" id="{{ include.prefix }}-count" aria-live="polite"></span>
+  </div>
+  <div class="pf-chips" id="{{ include.prefix }}-chips" role="group" aria-label="Filter {{ include.label }} by topic"></div>
+  <p class="pf-empty" id="{{ include.prefix }}-empty" hidden>Nothing matches — <button type="button" id="{{ include.prefix }}-reset">clear filters</button></p>
+</div>

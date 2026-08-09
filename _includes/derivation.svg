@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1040 140" role="img">
+        <!-- P2..P6 backgrounds (ZX panels) -->
+        <rect class="dv-bg" x="168" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="316" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="464" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="612" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="760" y="26" width="110" height="88" rx="8"/>
+
+        <!-- P1: circuit, three CNOTs -->
+        <g class="dv-wire">
+          <path d="M22 45 H128"/><path d="M22 95 H128"/>
+          <path d="M42 45 V95"/><path d="M75 45 V95"/><path d="M108 45 V95"/>
+        </g>
+        <circle class="dv-dot" cx="42" cy="45" r="5"/>
+        <circle class="dv-oplus" cx="42" cy="95" r="8"/><path class="dv-wire" d="M42 87 V103 M34 95 H50"/>
+        <circle class="dv-dot" cx="75" cy="95" r="5"/>
+        <circle class="dv-oplus" cx="75" cy="45" r="8"/><path class="dv-wire" d="M75 37 V53 M67 45 H83"/>
+        <circle class="dv-dot" cx="108" cy="45" r="5"/>
+        <circle class="dv-oplus" cx="108" cy="95" r="8"/><path class="dv-wire" d="M108 87 V103 M100 95 H116"/>
+
+        <!-- P2: as ZX spiders -->
+        <g class="dv-wire">
+          <path d="M170 45 H276"/><path d="M170 95 H276"/>
+          <path d="M193 45 V95"/><path d="M222 45 V95"/><path d="M251 45 V95"/>
+        </g>
+        <circle class="dv-g" cx="193" cy="45" r="9"/><circle class="dv-r" cx="193" cy="95" r="9"/>
+        <circle class="dv-r" cx="222" cy="45" r="9"/><circle class="dv-g" cx="222" cy="95" r="9"/>
+        <circle class="dv-g" cx="251" cy="45" r="9"/><circle class="dv-r" cx="251" cy="95" r="9"/>
+
+        <!-- P3: crossing appears, two pairs left -->
+        <g class="dv-wire">
+          <path d="M318 45 C 336 45, 346 95, 364 95"/>
+          <path d="M318 95 C 336 95, 346 45, 364 45"/>
+          <path d="M364 45 H424"/><path d="M364 95 H424"/>
+          <path d="M384 45 V95"/><path d="M410 45 V95"/>
+        </g>
+        <circle class="dv-g" cx="384" cy="45" r="9"/><circle class="dv-r" cx="384" cy="95" r="9"/>
+        <circle class="dv-g" cx="410" cy="45" r="9"/><circle class="dv-r" cx="410" cy="95" r="9"/>
+
+        <!-- P4: fused into one pair, double edge -->
+        <g class="dv-wire">
+          <path d="M466 45 C 484 45, 494 95, 512 95"/>
+          <path d="M466 95 C 484 95, 494 45, 512 45"/>
+          <path d="M512 45 H572"/><path d="M512 95 H572"/>
+          <path d="M542 45 C 534 62, 534 78, 542 95"/>
+          <path d="M542 45 C 550 62, 550 78, 542 95"/>
+        </g>
+        <circle class="dv-g" cx="542" cy="45" r="9"/><circle class="dv-r" cx="542" cy="95" r="9"/>
+
+        <!-- P5: double edge cancelled, spiders disconnect -->
+        <g class="dv-wire">
+          <path d="M614 45 C 632 45, 642 95, 660 95"/>
+          <path d="M614 95 C 632 95, 642 45, 660 45"/>
+          <path d="M660 45 H720"/><path d="M660 95 H720"/>
+        </g>
+        <circle class="dv-g" cx="690" cy="45" r="9"/><circle class="dv-r" cx="690" cy="95" r="9"/>
+
+        <!-- P6: just a crossing -->
+        <g class="dv-wire">
+          <path d="M762 45 C 800 45, 832 95, 868 95"/>
+          <path d="M762 95 C 800 95, 832 45, 868 45"/>
+        </g>
+
+        <!-- P7: swap gate icon -->
+        <g class="dv-wire">
+          <path d="M910 45 H1016"/><path d="M910 95 H1016"/>
+          <path d="M963 45 V95"/>
+          <path d="M955 37 L971 53"/><path d="M971 37 L955 53"/>
+          <path d="M955 87 L971 103"/><path d="M971 87 L955 103"/>
+        </g>
+
+        <!-- equals signs -->
+        <g class="dv-eq">
+          <path d="M140 63 H158 M140 77 H158"/>
+          <path d="M288 63 H306 M288 77 H306"/>
+          <path d="M436 63 H454 M436 77 H454"/>
+          <path d="M584 63 H602 M584 77 H602"/>
+          <path d="M732 63 H750 M732 77 H750"/>
+          <path d="M880 63 H898 M880 77 H898"/>
+        </g>
+      </svg>

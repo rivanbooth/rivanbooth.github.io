@@ -1,0 +1,22 @@
+# News. Newest first. 'body' may contain inline HTML links.
+
+- date: "Jul 2026"
+  body: "I gave a talk at FSCD 2026 on “Denotational semantics for stabiliser quantum programs” — <a href=\"pdfs/slides/2026-07-FSCD_stabiliser-semantics.pdf\">slides here</a>."
+
+- date: "Jun 2026"
+  body: "Two new preprints: “<a href=\"https://arxiv.org/abs/2606.28291\">Composing Quantum Instruments</a>” and “<a href=\"https://arxiv.org/abs/2607.09605\">Quantum Orchestras: a Concrete Semantics for Recursive Hybrid Programs</a>”."
+
+- date: "Apr 2026"
+  body: "“<a href=\"http://arxiv.org/abs/2401.07914\">Graphical Symplectic Algebra</a>” and “<a href=\"https://arxiv.org/abs/2511.22734\">Denotational semantics for stabiliser quantum programs</a>” were both accepted at <a href=\"https://fscd2026.github.io/\">FSCD 2026</a>!"
+
+- date: "Jan 2026"
+  body: "Cole gave a talk about our recent work at <a href=\"https://popl26.sigplan.org/home/planqc-2026\">PLanQC</a> — <a href=\"https://www.youtube.com/live/KWZm5wGDqtg?t=30000s\">video recording here</a>."
+
+- date: "Dec 2025"
+  body: "New preprint with <a href=\"https://colecomfort.github.io/index.html\">Cole Comfort</a>: “<a href=\"https://arxiv.org/abs/2511.22734\">Denotational semantics for stabiliser quantum programs</a>”."
+
+- date: "Nov 2025"
+  body: "“<a href=\"https://www.nature.com/articles/s41467-025-64872-3\">Effective descriptions of bosonic systems can be considered complete</a>” was published in <em>Nature Communications</em>!"
+
+- date: "Jun 2025"
+  body: "I started as Research Associate in Quantum Software at the <a href=\"https://www.cs.ox.ac.uk/activities/quantum/\">Oxford Quantum Group</a>."

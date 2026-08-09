@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# The long-form paragraphs. Plain text with inline HTML allowed (<em>, <a>, …).
+# The ">-" means "one paragraph, line breaks are just for readability here".
+# ---------------------------------------------------------------------------
+
+about_1: >-
+  I am a Research Associate in Quantum Software in the <a
+  href="https://www.cs.ox.ac.uk/activities/quantum/">Quantum Group</a> at the
+  University of Oxford. My research is about the mathematical foundations of
+  quantum computing: I have worked on diagrammatic reasoning, measurement-based
+  quantum computation, measures of non-classicality, and quantum computation
+  with continuous variables.
+
+about_2: >-
+  The problem that most excites me at the moment is <strong>fault-tolerant
+  quantum compilation</strong>: any useful quantum computation will have to
+  run on error-corrected, logical qubits, and we still lack the mathematical
+  tools to compile programs onto them systematically — across different
+  codes and architectures, with guarantees that the result still works. I
+  attack this with the tools I know best: algebra (especially symplectic and
+  stabiliser structure), category theory, graphical calculi, and the design
+  and semantics of quantum programming languages.
+
+research_lede: >-
+  Quantum computers will only ever be useful if they are
+  <em>fault-tolerant</em>: computations must run on logical qubits,
+  encoded in error-correcting codes, using operations that keep errors under
+  control. Compiling a program down to this level is nothing like ordinary
+  circuit compilation — the target is a code, the gates are surgeries and
+  measurements, and correctness is a theorem, not a test. My research builds
+  the mathematics that makes this tractable: algebraic structures that describe
+  codes and logical operations compositionally, graphical calculi to reason
+  and compute with them, and semantics that say precisely what a quantum
+  program means and what structure needs to be preserved during compilation.
+
+earlier_work: >-
+  <strong>Earlier work.</strong> My PhD extended measurement-based quantum
+  computation beyond qubits and before that I worked on experimental quantum
+  thermodynamics and metrology in Rome.
+
+long_game: >-
+  <strong>The long game:</strong> these threads converge on a single algebraic
+  framework for fault-tolerant compilation — one in which logical operations
+  on any code can be described, synthesised, optimised, and formally verified,
+  with quantitative guarantees on how errors propagate.
+
+teaching_1: >-
+  <strong>Categories and Quantum Informatics</strong> — lectures, computer
+  labs, and course material, University of Edinburgh (2023). This work earned
+  a University of Edinburgh Staff Award.
+
+teaching_2: >-
+  <strong>Introduction to Quantum Programming and Semantics</strong> — guest lectures
+  and tutorials, University of Edinburgh (2024).
+
+service: >-
+  I have served on the programme committees of QPL, ACT, and PLanQC, review for
+  <em>Quantum</em>, <em>Compositionality</em>, and <em>LMCS</em> among others, and
+  organised the Quantum Software Lab seminar in Edinburgh (2023–2025).
+
+students_note: >-
+  I welcome students interested in the algebra of quantum computing, fault tolerance,
+  or quantum programming languages — feel free to <a href="#contact">reach out</a>.
+
+talks_note: >-
+  If you would like me to speak at your seminar or event, <a href="#contact">get in touch</a>.

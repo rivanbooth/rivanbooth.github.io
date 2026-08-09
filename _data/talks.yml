@@ -1,0 +1,256 @@
+# Talks. Newest first. Add a new entry at the TOP.
+# tags: pick one venue type (conference/workshop/seminar) + any topics from _data/tags.yml
+
+- date: "Jul 2026"
+  title: "Denotational semantics for stabiliser quantum programs"
+  venue: "FSCD 2026"
+  tags: [conference, semantics, stabiliser, faulttol]
+  slides: "2026-07-FSCD_stabiliser-semantics.pdf"
+
+- date: "Jun 2026"
+  title: "Denotational semantics for stabiliser quantum programs"
+  venue: "LIQCS"
+  tags: [workshop, semantics, stabiliser]
+  slides: "2026-06-LIQCS_stabiliser-semantics.pdf"
+
+- date: "May 2026"
+  title: "The algebra for quantum fault-tolerance"
+  venue: "Algebraic and Combinatorial Perspectives in the Mathematical Sciences, online"
+  tags: [seminar, faulttol, algebra]
+
+- date: "Dec 2025"
+  title: "Denotational semantics for stabiliser quantum programs"
+  venue: "6th Scottish Programming Language Seminar, Glasgow"
+  tags: [workshop, semantics, stabiliser]
+  slides: "2025-12-SPLS_stabiliser-semantics.pdf"
+
+- date: "2025"
+  title: "CSS surgery: compiling any CNOT in any code"
+  venue: "QPL 2025, Varna"
+  tags: [conference, faulttol, algebra]
+
+- date: "Apr 2025"
+  title: "A convenient setting for fault-tolerant compilation"
+  venue: "Quantum Lunch seminar, University of Oxford"
+  tags: [seminar, faulttol]
+
+- date: "Apr 2025"
+  title: "Finding a convenient setting for fault-tolerant quantum compilation"
+  venue: "University College London"
+  tags: [seminar, faulttol]
+
+- date: "Nov 2024"
+  title: "CSS surgery: compiling any CNOT in any CSS code"
+  venue: "PhiQus team seminar, École Polytechnique, Saclay"
+  tags: [seminar, faulttol, algebra]
+  slides: "2024-11-PhiQus_css-surgery.pdf"
+
+- date: "Nov 2024"
+  title: "The nullifier theory of Gaussian quantum states"
+  venue: "Qatalyze seminar, Paris"
+  tags: [seminar, cv, algebra]
+  slides: "2024-11-Qatalyze_nullifiers.pdf"
+
+- date: "Oct 2024"
+  title: "Lattice surgery and the ZX-calculus"
+  venue: "QEC Journal Club"
+  tags: [seminar, faulttol, graphical]
+  slides: "2024-10-QECJournalClub_lattice-surgery-zx.pdf"
+
+- date: "2024"
+  title: "A graphical language for Gaussian quantum processes"
+  venue: "QPL 2024, Buenos Aires"
+  tags: [conference, graphical, cv, algebra]
+  slides: "2024-07-QPL_gaussian-processes.pdf"
+
+- date: "May 2024"
+  title: "Complete equational theories for classical and quantum Gaussian relations"
+  venue: "ZX seminar, online"
+  tags: [seminar, graphical, cv, algebra]
+  slides: "2024-05-ZXseminar_gaussian-relations.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "May 2024"
+  title: "A symplectic vision for the ZX-calculus"
+  venue: "CATNIP workshop, University of Aberdeen"
+  tags: [workshop, graphical, algebra]
+  slides: "2024-05-CATNIP_symplectic-zx.pdf"
+
+- date: "Apr 2024"
+  title: "Graphical reasoning for Gaussian quantum mechanics"
+  venue: "Loria, Nancy"
+  tags: [seminar, graphical, cv]
+  slides: "2024-04-Nancy_gaussian-reasoning.pdf"
+
+- date: "2024"
+  title: "Graphical Symplectic Algebra"
+  venue: "ZX seminar, online"
+  tags: [seminar, graphical, algebra, stabiliser]
+  slides: "2024-01-ZXseminar_GSA.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "Sep 2023"
+  title: "Diagrammatic reasoning beyond qubits"
+  venue: "Freie Universität Berlin"
+  tags: [seminar, graphical, stabiliser]
+  slides: "2023-09-FUBerlin_diagrammatic-beyond-qubits.pdf"
+
+- date: "Jun 2023"
+  title: "ZX-calculus: (my) past, present… future?"
+  venue: "LIP6 QI team seminar, Paris"
+  tags: [seminar, graphical]
+  slides: "2023-06-LIP6_zx-past-present-future.pdf"
+
+- date: "Jun 2023"
+  title: "Distributed quantum computing"
+  venue: "QCS Hub"
+  tags: [seminar, graphical]
+  slides: "2023-06-QCSHub_distributed-qc.pdf"
+
+- date: "Dec 2022"
+  title: "Distributing quantum circuits with the ZX-calculus"
+  venue: "NQCC Launch Event, University of Edinburgh"
+  tags: [workshop, graphical]
+  slides: "2022-12-NQCC_distributing-circuits.pdf"
+
+- date: "2022"
+  title: "Complete ZX-calculi for the stabiliser fragment in odd prime dimensions"
+  venue: "MFCS 2022, Vienna"
+  tags: [conference, graphical, stabiliser]
+  slides: "2022-08-MFCS_zx-odd-prime.pdf"
+
+- date: "2022"
+  title: "Complete ZX-calculi for the stabiliser fragment in odd prime dimensions"
+  venue: "QPL 2022, Oxford"
+  tags: [conference, graphical, stabiliser]
+  slides: "2022-07-QPL_zx-odd-prime.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "2022"
+  title: "Extracting reversible quantum circuits from measurement-based quantum computations with qudits"
+  venue: "QPL 2022, Oxford"
+  tags: [conference, mbqc, stabiliser]
+  slides: "2022-07-QPL_circuit-extraction.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "Jun 2022"
+  title: "Complete ZX-calculi for the stabiliser fragment in odd prime dimensions"
+  venue: "ZX seminar, online"
+  tags: [seminar, graphical, stabiliser]
+  slides: "2022-06-ZXseminar_zx-odd-prime.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "Mar 2022"
+  title: "Contextuality and Wigner negativity are equivalent for continuous-variable measurements"
+  venue: "Online Quantum and Linear Optical Computation seminar"
+  tags: [seminar, cv]
+  slides: "2022-03-QLOC_contextuality-wigner.pdf"
+
+- date: "Oct 2021"
+  title: "Contextuality and Wigner negativity are equivalent for continuous-variable measurements"
+  venue: "20th European Conference on Foundations of Physics, ENS Paris"
+  tags: [conference, cv]
+
+- date: "Oct 2021"
+  title: "Measurement-based quantum computation beyond qubits and related problems"
+  venue: "EPiQC"
+  tags: [conference, mbqc, cv]
+  slides: "2021-10-EPiQC_mbqc-beyond-qubits.pdf"
+
+- date: "Jul 2021"
+  title: "Measurement-based quantum computing and associated problems"
+  venue: "Journées Scientifiques Inria"
+  tags: [conference, mbqc]
+  slides: "2021-07-InriaJS_mbqc-overview.pdf"
+
+- date: "Jun 2021"
+  title: "Outcome determinism in measurement-based quantum computing with qudits"
+  venue: "ZX seminar, online"
+  tags: [seminar, mbqc, stabiliser]
+  slides: "2021-06-ZXseminar_outcome-determinism.pdf"
+
+- date: "Jun 2021"
+  title: "Outcome determinism in measurement-based quantum computing with qudits"
+  venue: "Workshop on recent advances on quantum computing, Collège de France"
+  tags: [workshop, mbqc, stabiliser]
+  slides: "2021-06-CollegeDeFrance_outcome-determinism.pdf"
+
+- date: "Jun 2021"
+  title: "F-flow: determinism in measurement-based quantum computing with qudits"
+  venue: "QPL 2021, University of Gdańsk"
+  tags: [conference, mbqc, stabiliser]
+  slides: "2021-06-QPL_f-flow.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "Jun 2021"
+  title: "Outcome determinism in measurement-based quantum computing for qudits"
+  venue: "LIP6 group meeting, Paris"
+  tags: [seminar, mbqc, stabiliser]
+  slides: "2021-06-LIP6_outcome-determinism.pdf"
+
+- date: "Apr 2021"
+  title: "F-flow: determinism in measurement-based quantum computing with qudits"
+  venue: "YQIS 2021, Michigan State University"
+  tags: [conference, mbqc, stabiliser]
+  slides: "2021-04-YQIS_f-flow.pdf"
+
+- date: "Jul 2020"
+  title: "Flow conditions for continuous-variable measurement-based quantum computation"
+  venue: "ZX seminar, online"
+  tags: [seminar, mbqc, cv]
+  slides: "2020-07-ZXseminar_cv-flow-conditions.pdf"
+
+- date: "Jun 2020"
+  title: "Flow conditions for continuous variable measurement-based quantum computation"
+  venue: "QPL 2020, Paris"
+  tags: [conference, mbqc, cv]
+  slides: "2020-06-QPL_cv-flow-conditions.pdf"
+  video_pending: true   # replace with:  video: https://...
+
+- date: "Feb 2020"
+  title: "Flow conditions for continuous-variable measurement-based quantum computation"
+  venue: "Workshop on Quantum Networks and Information 2020, NII Tokyo"
+  tags: [workshop, mbqc, cv]
+  slides: "2020-02-NII_cv-flow-conditions.pdf"
+
+- date: "Dec 2019"
+  title: "Flow conditions for continuous variable measurement-based quantum computing"
+  venue: "LIP6, Paris"
+  tags: [seminar, mbqc, cv]
+  slides: "2019-12-LIP6_cv-flow-conditions.pdf"
+
+- date: "Nov 2019"
+  title: "Flow conditions for continuous variable measurement-based quantum computing"
+  venue: "Atos"
+  tags: [seminar, mbqc, cv]
+  slides: "2019-11-Atos_cv-flow-conditions.pdf"
+
+- date: "Nov 2019"
+  title: "Flow conditions for continuous variable measurement-based quantum computing"
+  venue: "Loria, Nancy"
+  tags: [seminar, mbqc, cv]
+  slides: "2019-11-Loria_cv-flow-conditions.pdf"
+
+- date: "Jul 2019"
+  title: "Convergence of continuous-variable measurement-based quantum computations"
+  venue: "Edinburgh–Paris Joint Quantum Workshop, Edinburgh"
+  tags: [workshop, mbqc, cv]
+  slides: "2019-07-Edinburgh_cv-mbqc-convergence.pdf"
+
+- date: "Jun 2019"
+  title: "Flow conditions for continuous variables measurement-based quantum computation"
+  venue: "LIP6, Paris"
+  tags: [seminar, mbqc, cv]
+  slides: "2019-06-LIP6_cv-flow-conditions.pdf"
+
+- date: "Dec 2018"
+  title: "Generalised flow for continuous variables"
+  venue: "LIP6, Paris"
+  tags: [seminar, mbqc, cv]
+  slides: "2018-12-LIP6_generalised-flow-cv.pdf"
+
+- date: "Jun 2018"
+  title: "The complexity of non-Gaussian quantum circuits"
+  venue: "Loria, Nancy"
+  tags: [seminar, cv]
+  slides: "2018-06-Loria_non-gaussian-complexity.pdf"

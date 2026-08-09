@@ -1,0 +1,81 @@
+# Research cards. 'icon' maps to _includes/icons/<name>.svg
+# subobjectives: done: true|false ; refs: publication ids from _data/publications.yml
+
+- icon: lattice
+  title: "Fault-tolerant compilation"
+  question: "How do we implement logic on encoded qubits — in any code, not just the surface code?"
+  body: "The question driving the whole programme: what does it take to compile a logical circuit onto a quantum error-correcting code — any code — and know that it still works?"
+  subobjectives:
+    - text: "Entangling logic between arbitrary CSS codes, via generalised surgery"
+      done: true
+      refs:
+        - { id: surgery, label: "CSS surgery" }
+    - text: "Synthesis & optimisation of logical circuits across stabiliser codes"
+      done: false
+    - text: "Quantitative guarantees on how errors propagate through compiled protocols"
+      done: false
+
+- icon: spiders
+  title: "Graphical & algebraic calculi"
+  question: "What is the right algebra for quantum computation, and can we reason about it diagrammatically?"
+  body: "Complete graphical languages turn quantum-mechanical reasoning into diagram rewriting — and symplectic structure turns out to be the common backbone of stabiliser and Gaussian quantum mechanics."
+  subobjectives:
+    - text: "Complete ZX-calculi for qudit stabiliser theory"
+      done: true
+      refs:
+        - { id: zx-odd, label: "MFCS 2022" }
+        - { id: zxtravaganza, label: "QPL 2023" }
+    - text: "A graphical symplectic algebra spanning stabiliser & Gaussian QM"
+      done: true
+      refs:
+        - { id: gsa, label: "GSA" }
+    - text: "Complete equational theories for Gaussian relations"
+      done: true
+      refs:
+        - { id: gaussian, label: "arXiv:2403.10479" }
+    - text: "The algebra of codes & their logical operations"
+      done: false
+
+- icon: brackets
+  title: "Quantum programming languages & semantics"
+  question: "What does a quantum program mean, and how do its pieces compose?"
+  body: "Compilation you can trust needs a precise, compositional account of what programs mean — semantics is what turns compilation into something you can verify."
+  subobjectives:
+    - text: "Denotational semantics for stabiliser quantum programs"
+      done: true
+      refs:
+        - { id: stabsem, label: "FSCD 2026" }
+    - text: "How quantum instruments compose"
+      done: true
+      refs:
+        - { id: instruments, label: "arXiv:2606.28291" }
+    - text: "Semantics for recursive hybrid quantum–classical programs"
+      done: true
+      refs:
+        - { id: orchestras, label: "arXiv:2607.09605" }
+    - text: "Semantics for quantum error-correcting programs"
+      done: false
+    - text: "Verified fault-tolerant compilation"
+      done: false
+
+- icon: phasespace
+  title: "Continuous variables & bosonic systems"
+  question: "How do we reason about infinite-dimensional quantum systems?"
+  body: "Bosonic systems are infinite-dimensional — yet computation, non-classicality, and error correction all make sense there, and increasingly in hardware."
+  subobjectives:
+    - text: "Flow & determinism for CV measurement-based computation"
+      done: true
+      refs:
+        - { id: cvflow, label: "Quantum 2023" }
+    - text: "Contextuality &#8801; Wigner negativity for CV measurements"
+      done: true
+      refs:
+        - { id: wigner, label: "PRL 2022" }
+    - text: "Effective descriptions of bosonic systems are complete"
+      done: true
+      refs:
+        - { id: bosonic, label: "Nat. Comms 2025" }
+    - text: "Bosonic codes inside the compilation framework"
+      done: false
+    - text: "Graphical languages for bosonic computing"
+      done: false

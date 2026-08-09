@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>{{ site.title }} | Quantum Computation</title>
+<meta name="description" content="{{ site.description }}">
+<meta property="og:title" content="{{ site.title }} | Quantum Computation">
+<meta property="og:description" content="{{ site.og_description }}">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">{{ site.title }}</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</nav>
+
+{{ content }}
+
+<footer>
+  <div class="wrap">
+    <span>© {{ 'now' | date: "%Y" }} {{ site.title }}</span>
+    <span>Set in STIX Two Text — the typeface of the papers.</span>
+  </div>
+</footer>
+
+<script id="tag-labels" type="application/json">
+{
+{%- assign first = true -%}
+{%- for pair in site.data.tags -%}
+{%- unless first %},{% endunless %}"{{ pair[0] }}":"{{ pair[1] | escape }}"
+{%- assign first = false -%}
+{%- endfor -%}
+}
+</script>
+<script>
+  window.SITE = {
+    photos: [{% for p in site.photos %}{"src":"{{ p.file | relative_url }}","credit":"{{ p.credit | default: '' | escape }}"}{% unless forloop.last %},{% endunless %}{% endfor %}],
+    emailUser: "{{ site.contact.email_user }}",
+    emailDomain: "{{ site.contact.email_domain }}",
+    talksCollapse: {{ site.talks_collapse | default: 8 }}
+  };
+</script>
+<script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

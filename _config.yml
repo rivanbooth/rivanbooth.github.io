@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Site-wide settings. Everything here appears on the page; edit freely.
+# After changing this file you must restart `jekyll serve` (data files reload
+# automatically, _config.yml does not).
+# ---------------------------------------------------------------------------
+
+title: Robert I. Booth
+tagline: The mathematics of fault-tolerant quantum software.
+description: >-
+  Robert I. Booth is a researcher in quantum computation at the University of
+  Oxford, working on fault-tolerant quantum compilation, graphical and algebraic
+  calculi, and the semantics of quantum programming languages.
+og_description: >-
+  The mathematics of fault-tolerant quantum software — algebra, diagrams, and semantics.
+
+url: "https://robertbooth.fr"
+affiliation: Quantum Group · University of Oxford
+
+intro: >-
+  I develop the algebra, diagrammatic calculi, and programming-language semantics
+  needed to compile reliable computations onto error-corrected quantum computers.
+
+# Contact block
+contact:
+  lines:
+    - Quantum Group
+    - Department of Computer Science
+    - University of Oxford
+  # Email is assembled in JavaScript so scrapers don't get it plain.
+  email_user: robert.booth
+  email_domain: cs.ox.ac.uk
+
+cv: pdfs/CV.pdf
+
+links:
+  - { name: Google Scholar, url: "https://scholar.google.com/citations?user=YMsAJG8AAAAJ" }
+  - { name: ORCiD,          url: "https://orcid.org/0000-0002-1146-3380" }
+  - { name: arXiv,          url: "https://arxiv.org/search/?searchtype=author&query=Booth%2C+R+I" }
+
+# Random photo pool. 'credit' is optional — omit it and no credit is shown.
+photos:
+  - file: pictures/banana.jpeg
+    credit: Irene Paolini
+  - file: pictures/duchesse.jpeg
+    credit: Louis Lemonnier
+  - file: pictures/groth.jpeg
+
+# Show this many talks before the "show all" button
+talks_collapse: 8
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

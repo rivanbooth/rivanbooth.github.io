@@ -1,0 +1,26 @@
+# Academic path, newest first. accent: green|red (alternates the timeline dot)
+
+- date: "2024 – present"
+  role: "Research Associate in Quantum Software"
+  detail: "University of Oxford · with Aleks Kissinger"
+  accent: green
+
+- date: "2022 – 2025"
+  role: "Research Associate"
+  detail: "University of Edinburgh &amp; University of Bristol · with Chris Heunen and Noah Linden"
+  accent: red
+
+- date: "2018 – 2022"
+  role: "PhD in Quantum Computation"
+  detail: "Sorbonne Université (LIP6, Paris) &amp; Loria (Nancy) · “Measurement-based quantum computation beyond qubits” · supervised by Damian Markham and Simon Perdrix"
+  accent: green
+
+- date: "2016 – 2018"
+  role: "MSc in Fundamental Physics"
+  detail: "Université Pierre et Marie Curie, Paris"
+  accent: red
+
+- date: "2016 – 2018"
+  role: "Research internships"
+  detail: "Quantum information theory (LIP6, Paris) · experimental quantum optics (Roma Tre, with Marco Barbieri)"
+  accent: green

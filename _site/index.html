@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Robert I. Booth | Quantum Computation</title>
+<meta name="description" content="Robert I. Booth is a researcher in quantum computation at the University of Oxford, working on fault-tolerant quantum compilation, graphical and algebraic calculi, and the semantics of quantum programming languages.">
+<meta property="og:title" content="Robert I. Booth | Quantum Computation">
+<meta property="og:description" content="The mathematics of fault-tolerant quantum software — algebra, diagrams, and semantics.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=1786286519">
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Robert I. Booth</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="eyebrow">Quantum Group · University of Oxford</p>
+        <h1>Robert I. Booth</h1>
+        <p class="hero-tag">The mathematics of fault-tolerant quantum software.</p>
+        <p class="hero-sub">I develop the algebra, diagrammatic calculi, and programming-language semantics needed to compile reliable computations onto error-corrected quantum computers.</p>
+        <div class="hero-cta">
+          <a class="btn green" href="#research">What I work on</a>
+          <a class="btn" href="/pdfs/CV.pdf">Download CV</a>
+        </div>
+      </div>
+      <figure class="hero-photo" id="photo-fig">
+        <img id="rand-photo" alt="Robert I. Booth" width="220" height="330" loading="eager">
+        <figcaption class="photo-credit" id="photo-credit" hidden></figcaption>
+      </figure>
+    </div>
+
+    <figure class="derivation" aria-label="A diagrammatic derivation: three CNOT gates rewritten step by step in the ZX-calculus into a swap of two wires">
+      <div class="derivation-scroll">
+        <svg viewBox="0 0 1040 140" role="img">
+        <!-- P2..P6 backgrounds (ZX panels) -->
+        <rect class="dv-bg" x="168" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="316" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="464" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="612" y="26" width="110" height="88" rx="8"/>
+        <rect class="dv-bg" x="760" y="26" width="110" height="88" rx="8"/>
+
+        <!-- P1: circuit, three CNOTs -->
+        <g class="dv-wire">
+          <path d="M22 45 H128"/><path d="M22 95 H128"/>
+          <path d="M42 45 V95"/><path d="M75 45 V95"/><path d="M108 45 V95"/>
+        </g>
+        <circle class="dv-dot" cx="42" cy="45" r="5"/>
+        <circle class="dv-oplus" cx="42" cy="95" r="8"/><path class="dv-wire" d="M42 87 V103 M34 95 H50"/>
+        <circle class="dv-dot" cx="75" cy="95" r="5"/>
+        <circle class="dv-oplus" cx="75" cy="45" r="8"/><path class="dv-wire" d="M75 37 V53 M67 45 H83"/>
+        <circle class="dv-dot" cx="108" cy="45" r="5"/>
+        <circle class="dv-oplus" cx="108" cy="95" r="8"/><path class="dv-wire" d="M108 87 V103 M100 95 H116"/>
+
+        <!-- P2: as ZX spiders -->
+        <g class="dv-wire">
+          <path d="M170 45 H276"/><path d="M170 95 H276"/>
+          <path d="M193 45 V95"/><path d="M222 45 V95"/><path d="M251 45 V95"/>
+        </g>
+        <circle class="dv-g" cx="193" cy="45" r="9"/><circle class="dv-r" cx="193" cy="95" r="9"/>
+        <circle class="dv-r" cx="222" cy="45" r="9"/><circle class="dv-g" cx="222" cy="95" r="9"/>
+        <circle class="dv-g" cx="251" cy="45" r="9"/><circle class="dv-r" cx="251" cy="95" r="9"/>
+
+        <!-- P3: crossing appears, two pairs left -->
+        <g class="dv-wire">
+          <path d="M318 45 C 336 45, 346 95, 364 95"/>
+          <path d="M318 95 C 336 95, 346 45, 364 45"/>
+          <path d="M364 45 H424"/><path d="M364 95 H424"/>
+          <path d="M384 45 V95"/><path d="M410 45 V95"/>
+        </g>
+        <circle class="dv-g" cx="384" cy="45" r="9"/><circle class="dv-r" cx="384" cy="95" r="9"/>
+        <circle class="dv-g" cx="410" cy="45" r="9"/><circle class="dv-r" cx="410" cy="95" r="9"/>
+
+        <!-- P4: fused into one pair, double edge -->
+        <g class="dv-wire">
+          <path d="M466 45 C 484 45, 494 95, 512 95"/>
+          <path d="M466 95 C 484 95, 494 45, 512 45"/>
+          <path d="M512 45 H572"/><path d="M512 95 H572"/>
+          <path d="M542 45 C 534 62, 534 78, 542 95"/>
+          <path d="M542 45 C 550 62, 550 78, 542 95"/>
+        </g>
+        <circle class="dv-g" cx="542" cy="45" r="9"/><circle class="dv-r" cx="542" cy="95" r="9"/>
+
+        <!-- P5: double edge cancelled, spiders disconnect -->
+        <g class="dv-wire">
+          <path d="M614 45 C 632 45, 642 95, 660 95"/>
+          <path d="M614 95 C 632 95, 642 45, 660 45"/>
+          <path d="M660 45 H720"/><path d="M660 95 H720"/>
+        </g>
+        <circle class="dv-g" cx="690" cy="45" r="9"/><circle class="dv-r" cx="690" cy="95" r="9"/>
+
+        <!-- P6: just a crossing -->
+        <g class="dv-wire">
+          <path d="M762 45 C 800 45, 832 95, 868 95"/>
+          <path d="M762 95 C 800 95, 832 45, 868 45"/>
+        </g>
+
+        <!-- P7: swap gate icon -->
+        <g class="dv-wire">
+          <path d="M910 45 H1016"/><path d="M910 95 H1016"/>
+          <path d="M963 45 V95"/>
+          <path d="M955 37 L971 53"/><path d="M971 37 L955 53"/>
+          <path d="M955 87 L971 103"/><path d="M971 87 L955 103"/>
+        </g>
+
+        <!-- equals signs -->
+        <g class="dv-eq">
+          <path d="M140 63 H158 M140 77 H158"/>
+          <path d="M288 63 H306 M288 77 H306"/>
+          <path d="M436 63 H454 M436 77 H454"/>
+          <path d="M584 63 H602 M584 77 H602"/>
+          <path d="M732 63 H750 M732 77 H750"/>
+          <path d="M880 63 H898 M880 77 H898"/>
+        </g>
+      </svg>
+
+      </div>
+      <figcaption>three CNOTs = one swap, one rewrite at a time</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div>
+      <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-g" cx="15" cy="11" r="6"/></svg> About</h2>
+      <p>I am a Research Associate in Quantum Software in the <a href="https://www.cs.ox.ac.uk/activities/quantum/">Quantum Group</a> at the University of Oxford. My research is about the mathematical foundations of quantum computing: I have worked on diagrammatic reasoning, measurement-based quantum computation, measures of non-classicality, and quantum computation with continuous variables.</p>
+      <p>The problem that most excites me at the moment is <strong>fault-tolerant quantum compilation</strong>: any useful quantum computation will have to run on error-corrected, logical qubits, and we still lack the mathematical tools to compile programs onto them systematically — across different codes and architectures, with guarantees that the result still works. I attack this with the tools I know best: algebra (especially symplectic and stabiliser structure), category theory, graphical calculi, and the design and semantics of quantum programming languages.</p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1.1rem">Academic path</p>
+      <div class="path">
+        
+        <div class="path-item">
+          <span class="path-date">2024 – present</span>
+          <strong>Research Associate in Quantum Software</strong>
+          <span>University of Oxford · with Aleks Kissinger</span>
+        </div>
+        
+        <div class="path-item alt">
+          <span class="path-date">2022 – 2025</span>
+          <strong>Research Associate</strong>
+          <span>University of Edinburgh &amp; University of Bristol · with Chris Heunen and Noah Linden</span>
+        </div>
+        
+        <div class="path-item">
+          <span class="path-date">2018 – 2022</span>
+          <strong>PhD in Quantum Computation</strong>
+          <span>Sorbonne Université (LIP6, Paris) &amp; Loria (Nancy) · “Measurement-based quantum computation beyond qubits” · supervised by Damian Markham and Simon Perdrix</span>
+        </div>
+        
+        <div class="path-item alt">
+          <span class="path-date">2016 – 2018</span>
+          <strong>MSc in Fundamental Physics</strong>
+          <span>Université Pierre et Marie Curie, Paris</span>
+        </div>
+        
+        <div class="path-item">
+          <span class="path-date">2016 – 2018</span>
+          <strong>Research internships</strong>
+          <span>Quantum information theory (LIP6, Paris) · experimental quantum optics (Roma Tre, with Marco Barbieri)</span>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-r" cx="15" cy="11" r="6"/></svg> News</h2>
+    <ul class="news">
+      
+      <li><time>Jul 2026</time><div>I gave a talk at FSCD 2026 on “Denotational semantics for stabiliser quantum programs” — <a href="pdfs/slides/2026-07-FSCD_stabiliser-semantics.pdf">slides here</a>.</div></li>
+      
+      <li><time>Jun 2026</time><div>Two new preprints: “<a href="https://arxiv.org/abs/2606.28291">Composing Quantum Instruments</a>” and “<a href="https://arxiv.org/abs/2607.09605">Quantum Orchestras: a Concrete Semantics for Recursive Hybrid Programs</a>”.</div></li>
+      
+      <li><time>Apr 2026</time><div>“<a href="http://arxiv.org/abs/2401.07914">Graphical Symplectic Algebra</a>” and “<a href="https://arxiv.org/abs/2511.22734">Denotational semantics for stabiliser quantum programs</a>” were both accepted at <a href="https://fscd2026.github.io/">FSCD 2026</a>!</div></li>
+      
+      <li><time>Jan 2026</time><div>Cole gave a talk about our recent work at <a href="https://popl26.sigplan.org/home/planqc-2026">PLanQC</a> — <a href="https://www.youtube.com/live/KWZm5wGDqtg?t=30000s">video recording here</a>.</div></li>
+      
+      <li><time>Dec 2025</time><div>New preprint with <a href="https://colecomfort.github.io/index.html">Cole Comfort</a>: “<a href="https://arxiv.org/abs/2511.22734">Denotational semantics for stabiliser quantum programs</a>”.</div></li>
+      
+      <li><time>Nov 2025</time><div>“<a href="https://www.nature.com/articles/s41467-025-64872-3">Effective descriptions of bosonic systems can be considered complete</a>” was published in <em>Nature Communications</em>!</div></li>
+      
+      <li><time>Jun 2025</time><div>I started as Research Associate in Quantum Software at the <a href="https://www.cs.ox.ac.uk/activities/quantum/">Oxford Quantum Group</a>.</div></li>
+      
+    </ul>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2><svg class="spider" width="42" height="22" viewBox="0 0 42 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="40" y2="11"/><circle class="sp-g" cx="13" cy="11" r="5.5"/><circle class="sp-r" cx="29" cy="11" r="5.5"/></svg> Research</h2>
+    <p class="research-lede">Quantum computers will only ever be useful if they are <em>fault-tolerant</em>: computations must run on logical qubits, encoded in error-correcting codes, using operations that keep errors under control. Compiling a program down to this level is nothing like ordinary circuit compilation — the target is a code, the gates are surgeries and measurements, and correctness is a theorem, not a test. My research builds the mathematics that makes this tractable: algebraic structures that describe codes and logical operations compositionally, graphical calculi to reason and compute with them, and semantics that say precisely what a quantum program means and what structure needs to be preserved during compilation.</p>
+
+    <div class="themes">
+      
+      <article class="theme">
+        <div class="icon"><svg width="72" height="52" viewBox="0 0 72 52" aria-hidden="true">
+            <g class="ic-faint" stroke-width="2">
+              <rect x="6" y="6" width="13" height="13"/><rect x="19" y="6" width="13" height="13"/><rect x="32" y="6" width="13" height="13"/><rect x="45" y="6" width="13" height="13"/>
+              <rect x="6" y="19" width="13" height="13"/><rect x="19" y="19" width="13" height="13"/><rect x="32" y="19" width="13" height="13"/><rect x="45" y="19" width="13" height="13"/>
+              <rect x="6" y="32" width="13" height="13"/><rect x="19" y="32" width="13" height="13"/><rect x="32" y="32" width="13" height="13"/><rect x="45" y="32" width="13" height="13"/>
+            </g>
+            <path class="ic-rline" d="M6 25.5 H58" stroke-width="3"/>
+            <circle class="dv-r" cx="6" cy="25.5" r="3.5" stroke-width="1.8"/>
+            <circle class="dv-r" cx="58" cy="25.5" r="3.5" stroke-width="1.8"/>
+          </svg>
+
+</div>
+        <h3>Fault-tolerant compilation</h3>
+        <p class="q">How do we implement logic on encoded qubits — in any code, not just the surface code?</p>
+        <p>The question driving the whole programme: what does it take to compile a logical circuit onto a quantum error-correcting code — any code — and know that it still works?</p>
+        
+        <div class="subs">
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Entangling logic between arbitrary CSS codes, via generalised surgery</span>
+            <span class="meta"><a href="#pub-surgery">CSS surgery</a></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Synthesis & optimisation of logical circuits across stabiliser codes</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Quantitative guarantees on how errors propagate through compiled protocols</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+        </div>
+        
+      </article>
+      
+      <article class="theme">
+        <div class="icon"><svg width="86" height="52" viewBox="0 0 86 52" aria-hidden="true">
+            <g class="dv-wire" stroke-width="1.8">
+              <path d="M2 12 C 12 12, 14 18, 22 20"/>
+              <path d="M2 40 C 12 40, 14 32, 22 30"/>
+              <line x1="30" y1="25" x2="48" y2="25"/>
+              <path d="M56 25 C 66 25, 70 12, 84 12"/>
+              <path d="M56 25 C 66 25, 70 40, 84 40"/>
+            </g>
+            <circle class="dv-g" cx="26" cy="25" r="7" stroke-width="1.8"/>
+            <circle class="dv-r" cx="52" cy="25" r="7" stroke-width="1.8"/>
+          </svg>
+
+</div>
+        <h3>Graphical & algebraic calculi</h3>
+        <p class="q">What is the right algebra for quantum computation, and can we reason about it diagrammatically?</p>
+        <p>Complete graphical languages turn quantum-mechanical reasoning into diagram rewriting — and symplectic structure turns out to be the common backbone of stabiliser and Gaussian quantum mechanics.</p>
+        
+        <div class="subs">
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Complete ZX-calculi for qudit stabiliser theory</span>
+            <span class="meta"><a href="#pub-zx-odd">MFCS 2022</a> · <a href="#pub-zxtravaganza">QPL 2023</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">A graphical symplectic algebra spanning stabiliser & Gaussian QM</span>
+            <span class="meta"><a href="#pub-gsa">GSA</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Complete equational theories for Gaussian relations</span>
+            <span class="meta"><a href="#pub-gaussian">arXiv:2403.10479</a></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">The algebra of codes & their logical operations</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+        </div>
+        
+      </article>
+      
+      <article class="theme">
+        <div class="icon"><svg width="86" height="52" viewBox="0 0 86 52" aria-hidden="true">
+            <g class="ic-g" stroke-width="2.4" stroke-linecap="round">
+              <path d="M14 6 H7 V46 H14"/><path d="M22 6 H15 V46 H22"/>
+              <path d="M64 6 H71 V46 H64"/><path d="M56 6 H63 V46 H56"/>
+            </g>
+            <circle class="ic-rdot" cx="39" cy="26" r="3"/>
+          </svg>
+
+</div>
+        <h3>Quantum programming languages & semantics</h3>
+        <p class="q">What does a quantum program mean, and how do its pieces compose?</p>
+        <p>Compilation you can trust needs a precise, compositional account of what programs mean — semantics is what turns compilation into something you can verify.</p>
+        
+        <div class="subs">
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Denotational semantics for stabiliser quantum programs</span>
+            <span class="meta"><a href="#pub-stabsem">FSCD 2026</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">How quantum instruments compose</span>
+            <span class="meta"><a href="#pub-instruments">arXiv:2606.28291</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Semantics for recursive hybrid quantum–classical programs</span>
+            <span class="meta"><a href="#pub-orchestras">arXiv:2607.09605</a></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Semantics for quantum error-correcting programs</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Verified fault-tolerant compilation</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+        </div>
+        
+      </article>
+      
+      <article class="theme">
+        <div class="icon"><svg width="86" height="52" viewBox="0 0 86 52" aria-hidden="true">
+            <ellipse class="dv-wire" cx="43" cy="26" rx="30" ry="14" stroke-width="2.4" transform="rotate(-18 43 26)"/>
+            <ellipse class="dv-g" cx="43" cy="26" rx="16" ry="7" stroke-width="2.2" transform="rotate(-18 43 26)"/>
+            <line class="ic-faint" x1="43" y1="4" x2="43" y2="48" stroke-width="1.8"/>
+            <line class="ic-faint" x1="8" y1="26" x2="78" y2="26" stroke-width="1.8"/>
+          </svg>
+
+</div>
+        <h3>Continuous variables & bosonic systems</h3>
+        <p class="q">How do we reason about infinite-dimensional quantum systems?</p>
+        <p>Bosonic systems are infinite-dimensional — yet computation, non-classicality, and error correction all make sense there, and increasingly in hardware.</p>
+        
+        <div class="subs">
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Flow & determinism for CV measurement-based computation</span>
+            <span class="meta"><a href="#pub-cvflow">Quantum 2023</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Contextuality &#8801; Wigner negativity for CV measurements</span>
+            <span class="meta"><a href="#pub-wigner">PRL 2022</a></span>
+          </div>
+          
+          <div class="sub">
+            <span class="mk done"></span>
+            <span class="t">Effective descriptions of bosonic systems are complete</span>
+            <span class="meta"><a href="#pub-bosonic">Nat. Comms 2025</a></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Bosonic codes inside the compilation framework</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+          <div class="sub is-open">
+            <span class="mk open"></span>
+            <span class="t">Graphical languages for bosonic computing</span>
+            <span class="meta"><span class="tag">open</span></span>
+          </div>
+          
+        </div>
+        
+      </article>
+      
+    </div>
+
+    <p class="earlier"><strong>Earlier work.</strong> My PhD extended measurement-based quantum computation beyond qubits and before that I worked on experimental quantum thermodynamics and metrology in Rome.</p>
+    <p class="fits-cap" style="margin-top:2.2rem"><strong>The long game:</strong> these threads converge on a single algebraic framework for fault-tolerant compilation — one in which logical operations on any code can be described, synthesised, optimised, and formally verified, with quantitative guarantees on how errors propagate.</p>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-r" cx="15" cy="11" r="6"/></svg> Publications</h2>
+
+    <div id="pubfilter" hidden>
+  <div class="pf-row">
+    <label class="pf-search">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.4 10.4 L14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="search" id="pf-q" placeholder="Search titles, authors, venues…" aria-label="Search publications" autocomplete="off">
+    </label>
+    <span class="pf-count" id="pf-count" aria-live="polite"></span>
+  </div>
+  <div class="pf-chips" id="pf-chips" role="group" aria-label="Filter publications by topic"></div>
+  <p class="pf-empty" id="pf-empty" hidden>Nothing matches — <button type="button" id="pf-reset">clear filters</button></p>
+</div>
+
+
+    
+    
+    
+    <div class="pub-group">
+      <p class="eyebrow" style="margin-bottom:.6rem">Peer-reviewed</p>
+      
+      <div class="pub" id="pub-stabsem" data-kw="semantics stabiliser faulttol">
+        <span class="venue">FSCD 2026</span>
+        <h3><a href="https://arxiv.org/abs/2511.22734">Denotational semantics for stabiliser quantum programs</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Cole Comfort</p>
+        <p class="blurb">What stabiliser quantum programs mean, compositionally.</p>
+      </div>
+      
+      <div class="pub" id="pub-gsa" data-kw="graphical algebra stabiliser cv">
+        <span class="venue">FSCD 2026</span>
+        <h3><a href="http://arxiv.org/abs/2401.07914">Graphical Symplectic Algebra</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Titouan Carette, Cole Comfort</p>
+        <p class="blurb">A graphical calculus built on symplectic structure, spanning stabiliser and Gaussian quantum mechanics.</p>
+      </div>
+      
+      <div class="pub" id="pub-bosonic" data-kw="cv">
+        <span class="venue">Nature Communications · 2025</span>
+        <h3><a href="https://www.nature.com/articles/s41467-025-64872-3">Effective descriptions of bosonic systems can be considered complete</a></h3>
+        <p class="authors">Francesco Arzani, <b>Robert I. Booth</b>, Ulysse Chabaud</p>
+        <p class="blurb">Finite effective descriptions capture everything operationally accessible about bosonic systems.</p>
+      </div>
+      
+      <div class="pub" id="pub-cvflow" data-kw="mbqc cv">
+        <span class="venue">Quantum · 2023</span>
+        <h3><a href="https://quantum-journal.org/papers/q-2023-10-19-1146/">Flow conditions for continuous variable measurement-based quantum computing</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Damian Markham</p>
+        <p class="blurb">When continuous-variable measurement patterns define deterministic computations.</p>
+      </div>
+      
+      <div class="pub" id="pub-zxtravaganza" data-kw="graphical stabiliser">
+        <span class="venue">QPL 2023</span>
+        <h3><a href="https://eptcs.web.cse.unsw.edu.au/paper.cgi?QPL2023.13">The Qupit Stabiliser ZX-travaganza: Simplified Axioms, Normal Forms and Graph-Theoretic Simplification</a></h3>
+        <p class="authors">Boldizsár Poór, <b>Robert I. Booth</b>, Titouan Carette, John van de Wetering, Lia Yeh</p>
+        <p class="blurb">A toolkit of results for qudit stabiliser ZX-calculus in odd prime dimensions.</p>
+      </div>
+      
+      <div class="pub" id="pub-qudit-det" data-kw="mbqc stabiliser">
+        <span class="venue">J. Phys. A · 2023</span>
+        <h3><a href="https://dx.doi.org/10.1088/1751-8121/acbace">Outcome determinism in measurement-based quantum computation with qudits</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Aleks Kissinger, Damian Markham, Clément Meignant, Simon Perdrix</p>
+        <p class="blurb">Generalising flow-based determinism to qudit measurement-based computation.</p>
+      </div>
+      
+      <div class="pub" id="pub-wigner" data-kw="cv">
+        <span class="venue">Phys. Rev. Lett. · 2022</span>
+        <h3><a href="http://arxiv.org/abs/2111.13218">Contextuality and Wigner negativity are equivalent for continuous-variable quantum measurements</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Ulysse Chabaud, Pierre-Emmanuel Emeriau</p>
+        <p class="blurb">Two central notions of quantumness coincide in the continuous-variable setting.</p>
+      </div>
+      
+      <div class="pub" id="pub-zx-odd" data-kw="graphical stabiliser">
+        <span class="venue">MFCS 2022</span>
+        <h3><a href="https://drops.dagstuhl.de/opus/volltexte/2022/16822">Complete ZX-Calculi for the Stabiliser Fragment in Odd Prime Dimensions</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Titouan Carette</p>
+        <p class="blurb">Complete equational theories for qudit stabiliser quantum mechanics.</p>
+      </div>
+      
+      <div class="pub" data-kw="">
+        <span class="venue">Phys. Rev. A · 2018</span>
+        <h3><a href="https://link.aps.org/doi/10.1103/PhysRevA.98.050101">Bridging thermodynamics and metrology in nonequilibrium quantum thermometry</a></h3>
+        <p class="authors">Vasco Cavina, Luca Mancino, Antonella De Pasquale, Ilaria Gianani, Marco Sbroscia, <b>Robert I. Booth</b>, Emanuele Roccia, Roberto Raimondi, Vittorio Giovannetti, Marco Barbieri</p>
+        
+      </div>
+      
+      <div class="pub" data-kw="">
+        <span class="venue">Phys. Rev. Lett. · 2018</span>
+        <h3><a href="https://link.aps.org/doi/10.1103/PhysRevLett.121.160602">Geometrical Bounds on Irreversibility in Open Quantum Systems</a></h3>
+        <p class="authors">Luca Mancino, Vasco Cavina, Antonella De Pasquale, Marco Sbroscia, <b>Robert I. Booth</b>, Emanuele Roccia, Ilaria Gianani, Vittorio Giovannetti, Marco Barbieri</p>
+        
+      </div>
+      
+    </div>
+    
+    <div class="pub-group">
+      <p class="eyebrow" style="margin-bottom:.6rem">Preprints</p>
+      
+      <div class="pub" id="pub-instruments" data-kw="semantics algebra">
+        <span class="venue">arXiv:2606.28291</span>
+        <h3><a href="https://arxiv.org/abs/2606.28291">Composing Quantum Instruments</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Dominik Leichtle, Alex Rice, Kim Worrall</p>
+        <p class="blurb">The compositional structure of quantum operations with classical input and output.</p>
+      </div>
+      
+      <div class="pub" id="pub-orchestras" data-kw="semantics">
+        <span class="venue">arXiv:2607.09605</span>
+        <h3><a href="https://arxiv.org/abs/2607.09605">Quantum Orchestras: a Concrete Semantics for Recursive Hybrid Programs</a></h3>
+        <p class="authors">Alex Rice, Dominik Leichtle, Kim Worrall, <b>Robert I. Booth</b></p>
+        <p class="blurb">Concrete semantics for recursive hybrid quantum–classical programs.</p>
+      </div>
+      
+      <div class="pub" id="pub-surgery" data-kw="faulttol algebra">
+        <span class="venue">arXiv:2505.01370</span>
+        <h3><a href="https://arxiv.org/abs/2505.01370">Engineering CSS surgery: compiling any CNOT in any code</a></h3>
+        <p class="authors">Clément Poirson, Joschka Roffe, <b>Robert I. Booth</b></p>
+        <p class="blurb">Generalised surgery implementing entangling logical gates between arbitrary CSS codes.</p>
+      </div>
+      
+      <div class="pub" id="pub-gaussian" data-kw="graphical algebra cv">
+        <span class="venue">arXiv:2403.10479</span>
+        <h3><a href="http://arxiv.org/pdf/2403.10479">Complete equational theories for classical and quantum Gaussian relations</a></h3>
+        <p class="authors"><b>Robert I. Booth</b>, Titouan Carette, Cole Comfort</p>
+        <p class="blurb">A complete graphical calculus for the Gaussian, continuous-variable world.</p>
+      </div>
+      
+    </div>
+    
+
+    <p class="muted" style="font-size:.9rem">Also on
+      <a href="https://scholar.google.com/citations?user=YMsAJG8AAAAJ">Google Scholar</a> · <a href="https://orcid.org/0000-0002-1146-3380">ORCiD</a> · <a href="https://arxiv.org/search/?searchtype=author&query=Booth%2C+R+I">arXiv</a>.
+    </p>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-g" cx="15" cy="11" r="6"/></svg> Talks</h2>
+
+    <div id="talkfilter" hidden>
+  <div class="pf-row">
+    <label class="pf-search">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.4 10.4 L14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="search" id="tf-q" placeholder="Search talks, venues…" aria-label="Search talks" autocomplete="off">
+    </label>
+    <span class="pf-count" id="tf-count" aria-live="polite"></span>
+  </div>
+  <div class="pf-chips" id="tf-chips" role="group" aria-label="Filter talks by topic"></div>
+  <p class="pf-empty" id="tf-empty" hidden>Nothing matches — <button type="button" id="tf-reset">clear filters</button></p>
+</div>
+
+
+    <div id="talklist">
+      
+      <div class="talk" data-kw="conference semantics stabiliser faulttol">
+        <time>Jul 2026</time>
+        <div><strong>Denotational semantics for stabiliser quantum programs</strong>
+          <div class="where">FSCD 2026 · <a href="/pdfs/slides/2026-07-FSCD_stabiliser-semantics.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop semantics stabiliser">
+        <time>Jun 2026</time>
+        <div><strong>Denotational semantics for stabiliser quantum programs</strong>
+          <div class="where">LIQCS · <a href="/pdfs/slides/2026-06-LIQCS_stabiliser-semantics.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar faulttol algebra">
+        <time>May 2026</time>
+        <div><strong>The algebra for quantum fault-tolerance</strong>
+          <div class="where">Algebraic and Combinatorial Perspectives in the Mathematical Sciences, online</div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop semantics stabiliser">
+        <time>Dec 2025</time>
+        <div><strong>Denotational semantics for stabiliser quantum programs</strong>
+          <div class="where">6th Scottish Programming Language Seminar, Glasgow · <a href="/pdfs/slides/2025-12-SPLS_stabiliser-semantics.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference faulttol algebra">
+        <time>2025</time>
+        <div><strong>CSS surgery: compiling any CNOT in any code</strong>
+          <div class="where">QPL 2025, Varna</div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar faulttol">
+        <time>Apr 2025</time>
+        <div><strong>A convenient setting for fault-tolerant compilation</strong>
+          <div class="where">Quantum Lunch seminar, University of Oxford</div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar faulttol">
+        <time>Apr 2025</time>
+        <div><strong>Finding a convenient setting for fault-tolerant quantum compilation</strong>
+          <div class="where">University College London</div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar faulttol algebra">
+        <time>Nov 2024</time>
+        <div><strong>CSS surgery: compiling any CNOT in any CSS code</strong>
+          <div class="where">PhiQus team seminar, École Polytechnique, Saclay · <a href="/pdfs/slides/2024-11-PhiQus_css-surgery.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar cv algebra">
+        <time>Nov 2024</time>
+        <div><strong>The nullifier theory of Gaussian quantum states</strong>
+          <div class="where">Qatalyze seminar, Paris · <a href="/pdfs/slides/2024-11-Qatalyze_nullifiers.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar faulttol graphical">
+        <time>Oct 2024</time>
+        <div><strong>Lattice surgery and the ZX-calculus</strong>
+          <div class="where">QEC Journal Club · <a href="/pdfs/slides/2024-10-QECJournalClub_lattice-surgery-zx.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference graphical cv algebra">
+        <time>2024</time>
+        <div><strong>A graphical language for Gaussian quantum processes</strong>
+          <div class="where">QPL 2024, Buenos Aires · <a href="/pdfs/slides/2024-07-QPL_gaussian-processes.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical cv algebra">
+        <time>May 2024</time>
+        <div><strong>Complete equational theories for classical and quantum Gaussian relations</strong>
+          <div class="where">ZX seminar, online · <a href="/pdfs/slides/2024-05-ZXseminar_gaussian-relations.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop graphical algebra">
+        <time>May 2024</time>
+        <div><strong>A symplectic vision for the ZX-calculus</strong>
+          <div class="where">CATNIP workshop, University of Aberdeen · <a href="/pdfs/slides/2024-05-CATNIP_symplectic-zx.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical cv">
+        <time>Apr 2024</time>
+        <div><strong>Graphical reasoning for Gaussian quantum mechanics</strong>
+          <div class="where">Loria, Nancy · <a href="/pdfs/slides/2024-04-Nancy_gaussian-reasoning.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical algebra stabiliser">
+        <time>2024</time>
+        <div><strong>Graphical Symplectic Algebra</strong>
+          <div class="where">ZX seminar, online · <a href="/pdfs/slides/2024-01-ZXseminar_GSA.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical stabiliser">
+        <time>Sep 2023</time>
+        <div><strong>Diagrammatic reasoning beyond qubits</strong>
+          <div class="where">Freie Universität Berlin · <a href="/pdfs/slides/2023-09-FUBerlin_diagrammatic-beyond-qubits.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical">
+        <time>Jun 2023</time>
+        <div><strong>ZX-calculus: (my) past, present… future?</strong>
+          <div class="where">LIP6 QI team seminar, Paris · <a href="/pdfs/slides/2023-06-LIP6_zx-past-present-future.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical">
+        <time>Jun 2023</time>
+        <div><strong>Distributed quantum computing</strong>
+          <div class="where">QCS Hub · <a href="/pdfs/slides/2023-06-QCSHub_distributed-qc.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop graphical">
+        <time>Dec 2022</time>
+        <div><strong>Distributing quantum circuits with the ZX-calculus</strong>
+          <div class="where">NQCC Launch Event, University of Edinburgh · <a href="/pdfs/slides/2022-12-NQCC_distributing-circuits.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference graphical stabiliser">
+        <time>2022</time>
+        <div><strong>Complete ZX-calculi for the stabiliser fragment in odd prime dimensions</strong>
+          <div class="where">MFCS 2022, Vienna · <a href="/pdfs/slides/2022-08-MFCS_zx-odd-prime.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference graphical stabiliser">
+        <time>2022</time>
+        <div><strong>Complete ZX-calculi for the stabiliser fragment in odd prime dimensions</strong>
+          <div class="where">QPL 2022, Oxford · <a href="/pdfs/slides/2022-07-QPL_zx-odd-prime.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc stabiliser">
+        <time>2022</time>
+        <div><strong>Extracting reversible quantum circuits from measurement-based quantum computations with qudits</strong>
+          <div class="where">QPL 2022, Oxford · <a href="/pdfs/slides/2022-07-QPL_circuit-extraction.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar graphical stabiliser">
+        <time>Jun 2022</time>
+        <div><strong>Complete ZX-calculi for the stabiliser fragment in odd prime dimensions</strong>
+          <div class="where">ZX seminar, online · <a href="/pdfs/slides/2022-06-ZXseminar_zx-odd-prime.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar cv">
+        <time>Mar 2022</time>
+        <div><strong>Contextuality and Wigner negativity are equivalent for continuous-variable measurements</strong>
+          <div class="where">Online Quantum and Linear Optical Computation seminar · <a href="/pdfs/slides/2022-03-QLOC_contextuality-wigner.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference cv">
+        <time>Oct 2021</time>
+        <div><strong>Contextuality and Wigner negativity are equivalent for continuous-variable measurements</strong>
+          <div class="where">20th European Conference on Foundations of Physics, ENS Paris</div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc cv">
+        <time>Oct 2021</time>
+        <div><strong>Measurement-based quantum computation beyond qubits and related problems</strong>
+          <div class="where">EPiQC · <a href="/pdfs/slides/2021-10-EPiQC_mbqc-beyond-qubits.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc">
+        <time>Jul 2021</time>
+        <div><strong>Measurement-based quantum computing and associated problems</strong>
+          <div class="where">Journées Scientifiques Inria · <a href="/pdfs/slides/2021-07-InriaJS_mbqc-overview.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc stabiliser">
+        <time>Jun 2021</time>
+        <div><strong>Outcome determinism in measurement-based quantum computing with qudits</strong>
+          <div class="where">ZX seminar, online · <a href="/pdfs/slides/2021-06-ZXseminar_outcome-determinism.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop mbqc stabiliser">
+        <time>Jun 2021</time>
+        <div><strong>Outcome determinism in measurement-based quantum computing with qudits</strong>
+          <div class="where">Workshop on recent advances on quantum computing, Collège de France · <a href="/pdfs/slides/2021-06-CollegeDeFrance_outcome-determinism.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc stabiliser">
+        <time>Jun 2021</time>
+        <div><strong>F-flow: determinism in measurement-based quantum computing with qudits</strong>
+          <div class="where">QPL 2021, University of Gdańsk · <a href="/pdfs/slides/2021-06-QPL_f-flow.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc stabiliser">
+        <time>Jun 2021</time>
+        <div><strong>Outcome determinism in measurement-based quantum computing for qudits</strong>
+          <div class="where">LIP6 group meeting, Paris · <a href="/pdfs/slides/2021-06-LIP6_outcome-determinism.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc stabiliser">
+        <time>Apr 2021</time>
+        <div><strong>F-flow: determinism in measurement-based quantum computing with qudits</strong>
+          <div class="where">YQIS 2021, Michigan State University · <a href="/pdfs/slides/2021-04-YQIS_f-flow.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Jul 2020</time>
+        <div><strong>Flow conditions for continuous-variable measurement-based quantum computation</strong>
+          <div class="where">ZX seminar, online · <a href="/pdfs/slides/2020-07-ZXseminar_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="conference mbqc cv">
+        <time>Jun 2020</time>
+        <div><strong>Flow conditions for continuous variable measurement-based quantum computation</strong>
+          <div class="where">QPL 2020, Paris · <a href="/pdfs/slides/2020-06-QPL_cv-flow-conditions.pdf">slides</a> · <span class="novideo" title="recording exists — link to be added">video</span></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop mbqc cv">
+        <time>Feb 2020</time>
+        <div><strong>Flow conditions for continuous-variable measurement-based quantum computation</strong>
+          <div class="where">Workshop on Quantum Networks and Information 2020, NII Tokyo · <a href="/pdfs/slides/2020-02-NII_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Dec 2019</time>
+        <div><strong>Flow conditions for continuous variable measurement-based quantum computing</strong>
+          <div class="where">LIP6, Paris · <a href="/pdfs/slides/2019-12-LIP6_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Nov 2019</time>
+        <div><strong>Flow conditions for continuous variable measurement-based quantum computing</strong>
+          <div class="where">Atos · <a href="/pdfs/slides/2019-11-Atos_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Nov 2019</time>
+        <div><strong>Flow conditions for continuous variable measurement-based quantum computing</strong>
+          <div class="where">Loria, Nancy · <a href="/pdfs/slides/2019-11-Loria_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="workshop mbqc cv">
+        <time>Jul 2019</time>
+        <div><strong>Convergence of continuous-variable measurement-based quantum computations</strong>
+          <div class="where">Edinburgh–Paris Joint Quantum Workshop, Edinburgh · <a href="/pdfs/slides/2019-07-Edinburgh_cv-mbqc-convergence.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Jun 2019</time>
+        <div><strong>Flow conditions for continuous variables measurement-based quantum computation</strong>
+          <div class="where">LIP6, Paris · <a href="/pdfs/slides/2019-06-LIP6_cv-flow-conditions.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar mbqc cv">
+        <time>Dec 2018</time>
+        <div><strong>Generalised flow for continuous variables</strong>
+          <div class="where">LIP6, Paris · <a href="/pdfs/slides/2018-12-LIP6_generalised-flow-cv.pdf">slides</a></div>
+        </div>
+      </div>
+      
+      <div class="talk" data-kw="seminar cv">
+        <time>Jun 2018</time>
+        <div><strong>The complexity of non-Gaussian quantum circuits</strong>
+          <div class="where">Loria, Nancy · <a href="/pdfs/slides/2018-06-Loria_non-gaussian-complexity.pdf">slides</a></div>
+        </div>
+      </div>
+      
+    </div>
+    <p class="talk-more"><button type="button" id="tf-more" hidden></button></p>
+    <p class="muted" style="margin-top:1.4rem;font-size:.92rem">If you would like me to speak at your seminar or event, <a href="#contact">get in touch</a>.</p>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap teach-grid">
+    <div>
+      <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-r" cx="15" cy="11" r="6"/></svg> Teaching &amp; service</h2>
+      <p><strong>Categories and Quantum Informatics</strong> — lectures, computer labs, and course material, University of Edinburgh (2023). This work earned a University of Edinburgh Staff Award.</p>
+      <p><strong>Introduction to Quantum Programming and Semantics</strong> — guest lectures and tutorials, University of Edinburgh (2024).</p>
+      <p style="margin-top:1.2rem" class="muted">I have served on the programme committees of QPL, ACT, and PLanQC, review for <em>Quantum</em>, <em>Compositionality</em>, and <em>LMCS</em> among others, and organised the Quantum Software Lab seminar in Edinburgh (2023–2025).</p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1rem">Students supervised</p>
+      <ul class="students">
+        <li>Nathan Hall — MSc 2026</li><li>Axel Daboust — MSc 2026</li><li>Sascha Haupt — MSc 2024–2026</li><li>Boren Gu — MSc 2025, now PhD at Freie Universität Berlin</li><li>Clément Poirson — MSc 2024, now PhD at Inria Paris / Alice &amp; Bob</li>
+      </ul>
+      <p class="muted" style="margin-top:1.2rem;font-size:.92rem">I welcome students interested in the algebra of quantum computing, fault tolerance, or quantum programming languages — feel free to <a href="#contact">reach out</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2><svg class="spider" width="30" height="22" viewBox="0 0 30 22" aria-hidden="true"><line class="sp-w" x1="2" y1="11" x2="28" y2="11"/><circle class="sp-g" cx="15" cy="11" r="6"/></svg> Get in touch</h2>
+      <p><strong>Robert I. Booth</strong><br>
+        Quantum Group<br>Department of Computer Science<br>University of Oxford</p>
+      <p style="margin-top:1rem"><button id="email-btn" type="button">Click to reveal email</button></p>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:1rem">Elsewhere</p>
+      <div class="contact-links">
+        <a class="btn" href="https://scholar.google.com/citations?user=YMsAJG8AAAAJ">Google Scholar</a><a class="btn" href="https://orcid.org/0000-0002-1146-3380">ORCiD</a><a class="btn" href="https://arxiv.org/search/?searchtype=author&query=Booth%2C+R+I">arXiv</a>
+        <a class="btn" href="/pdfs/CV.pdf">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Robert I. Booth</span>
+    <span>Set in STIX Two Text — the typeface of the papers.</span>
+  </div>
+</footer>
+
+<script id="tag-labels" type="application/json">
+{"faulttol":"fault tolerance","graphical":"graphical calculi","algebra":"algebra","stabiliser":"stabiliser &amp; qudits","semantics":"semantics","mbqc":"measurement-based","cv":"continuous variables","conference":"conference","workshop":"workshop","seminar":"seminar"}
+</script>
+<script>
+  window.SITE = {
+    photos: [{"src":"/pictures/banana.jpeg","credit":"Irene Paolini"},{"src":"/pictures/duchesse.jpeg","credit":"Louis Lemonnier"},{"src":"/pictures/groth.jpeg","credit":""}],
+    emailUser: "robert.booth",
+    emailDomain: "cs.ox.ac.uk",
+    talksCollapse: 8
+  };
+</script>
+<script src="/assets/js/site.js?v=1786286519"></script>
+</body>
+</html>
