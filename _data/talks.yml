@@ -17,6 +17,7 @@
   title: "The algebra for quantum fault-tolerance"
   venue: "Algebraic and Combinatorial Perspectives in the Mathematical Sciences, online"
   tags: [seminar, faulttol, algebra]
+  video: https://www.math.ntnu.no/acpms/view_talk.html?id=199
 
 - date: "Dec 2025"
   title: "Denotational semantics for stabiliser quantum programs"
@@ -68,7 +69,7 @@
   venue: "ZX seminar, online"
   tags: [seminar, graphical, cv, algebra]
   slides: "2024-05-ZXseminar_gaussian-relations.pdf"
-  video_pending: true   # replace with:  video: https://...
+  video: https://www.youtube.com/watch?v=Ar_H0ra-45w
 
 - date: "May 2024"
   title: "A symplectic vision for the ZX-calculus"
@@ -87,7 +88,7 @@
   venue: "ZX seminar, online"
   tags: [seminar, graphical, algebra, stabiliser]
   slides: "2024-01-ZXseminar_GSA.pdf"
-  video_pending: true   # replace with:  video: https://...
+  video: https://www.youtube.com/watch?v=QJcEeZsL2S8
 
 - date: "Sep 2023"
   title: "Diagrammatic reasoning beyond qubits"
@@ -124,21 +125,21 @@
   venue: "QPL 2022, Oxford"
   tags: [conference, graphical, stabiliser]
   slides: "2022-07-QPL_zx-odd-prime.pdf"
-  video_pending: true   # replace with:  video: https://...
+  video: https://www.youtube.com/watch?v=v_y8Wu6GLxc
 
 - date: "2022"
   title: "Extracting reversible quantum circuits from measurement-based quantum computations with qudits"
   venue: "QPL 2022, Oxford"
   tags: [conference, mbqc, stabiliser]
   slides: "2022-07-QPL_circuit-extraction.pdf"
-  video_pending: true   # replace with:  video: https://...
+  video: https://youtu.be/GKwFNu-otyw?si=9cWqKxCzDTER98Z0&t=2593
 
 - date: "Jun 2022"
   title: "Complete ZX-calculi for the stabiliser fragment in odd prime dimensions"
   venue: "ZX seminar, online"
   tags: [seminar, graphical, stabiliser]
   slides: "2022-06-ZXseminar_zx-odd-prime.pdf"
-  video_pending: true   # replace with:  video: https://...
+  video: https://www.youtube.com/watch?v=zDlnMkuBLyM
 
 - date: "Mar 2022"
   title: "Contextuality and Wigner negativity are equivalent for continuous-variable measurements"
