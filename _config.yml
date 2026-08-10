@@ -5,20 +5,19 @@
 # ---------------------------------------------------------------------------
 
 title: Robert I. Booth
-tagline: The mathematics of fault-tolerant quantum software.
+tagline: Research Associate in Quantum Software
 description: >-
   Robert I. Booth is a researcher in quantum computation at the University of
   Oxford, working on fault-tolerant quantum compilation, graphical and algebraic
   calculi, and the semantics of quantum programming languages.
-og_description: >-
-  The mathematics of fault-tolerant quantum software — algebra, diagrams, and semantics.
 
 url: "https://robertbooth.fr"
 affiliation: Quantum Group · University of Oxford
 
 intro: >-
-  I develop the algebra, diagrammatic calculi, and programming-language semantics
-  needed to compile reliable computations onto error-corrected quantum computers.
+  I work on the mathematical foundations of fault-tolerance which are needed
+  to compile computations into reliable error-corrected implementations on
+  quantum computers.
 
 # Contact block
 contact:

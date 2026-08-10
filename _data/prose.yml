@@ -15,32 +15,33 @@ about_2: >-
   The problem that most excites me at the moment is <strong>fault-tolerant
   quantum compilation</strong>: any useful quantum computation will have to
   run on error-corrected, logical qubits, and we still lack the mathematical
-  tools to compile programs onto them systematically — across different
-  codes and architectures, with guarantees that the result still works. I
+  tools to compile programs onto them systematically across different
+  codes and architectures, with guarantees that the result is still correct. I
   attack this with the tools I know best: algebra (especially symplectic and
   stabiliser structure), category theory, graphical calculi, and the design
-  and semantics of quantum programming languages.
+  and semantics of programming languages.
 
 research_lede: >-
   Quantum computers will only ever be useful if they are
-  <em>fault-tolerant</em>: computations must run on logical qubits,
+  <strong>fault-tolerant</strong>: computations must run on logical qubits,
   encoded in error-correcting codes, using operations that keep errors under
-  control. Compiling a program down to this level is nothing like ordinary
-  circuit compilation — the target is a code, the gates are surgeries and
-  measurements, and correctness is a theorem, not a test. My research builds
-  the mathematics that makes this tractable: algebraic structures that describe
-  codes and logical operations compositionally, graphical calculi to reason
-  and compute with them, and semantics that say precisely what a quantum
-  program means and what structure needs to be preserved during compilation.
+  control. Compiling a program down to this level is requires very different
+  techniques from ordinary compilation: the physical implementation must be
+  carefully orchestrated so that errors are caught whenever they occur. My
+  research builds the mathematical foundation on which such a compiler can be
+  designed: algebraic structures that describe codes and logical operations
+  compositionally, graphical calculi to reason and compute with them, and
+  semantics that say precisely what a quantum program means and what structure
+  needs to be preserved during compilation.
 
 earlier_work: >-
-  <strong>Earlier work.</strong> My PhD extended measurement-based quantum
+  <strong>Earlier work:</strong> My PhD extended measurement-based quantum
   computation beyond qubits and before that I worked on experimental quantum
   thermodynamics and metrology in Rome.
 
 long_game: >-
-  <strong>The long game:</strong> these threads converge on a single algebraic
-  framework for fault-tolerant compilation — one in which logical operations
+  <strong>Long term:</strong> these threads converge on a single algebraic
+  framework for fault-tolerant compilation: one in which logical operations
   on any code can be described, synthesised, optimised, and formally verified,
   with quantitative guarantees on how errors propagate.
 

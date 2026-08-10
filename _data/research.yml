@@ -3,8 +3,8 @@
 
 - icon: lattice
   title: "Fault-tolerant compilation"
-  question: "How do we implement logic on encoded qubits — in any code, not just the surface code?"
-  body: "The question driving the whole programme: what does it take to compile a logical circuit onto a quantum error-correcting code — any code — and know that it still works?"
+  question: "How do we implement logic on encoded qubits?"
+  body: "This is the question that underlies my whole programme: how does one compile a logical program onto a quantum error-correcting code and guarantee that it still works?"
   subobjectives:
     - text: "Entangling logic between arbitrary CSS codes, via generalised surgery"
       done: true
@@ -18,7 +18,7 @@
 - icon: spiders
   title: "Graphical & algebraic calculi"
   question: "What is the right algebra for quantum computation, and can we reason about it diagrammatically?"
-  body: "Complete graphical languages turn quantum-mechanical reasoning into diagram rewriting — and symplectic structure turns out to be the common backbone of stabiliser and Gaussian quantum mechanics."
+  body: "Graphical languages turn quantum-mechanical reasoning into diagram rewriting, and are natural intermediate representations for program synthesis and optimisation."
   subobjectives:
     - text: "Complete ZX-calculi for qudit stabiliser theory"
       done: true
@@ -39,7 +39,7 @@
 - icon: brackets
   title: "Quantum programming languages & semantics"
   question: "What does a quantum program mean, and how do its pieces compose?"
-  body: "Compilation you can trust needs a precise, compositional account of what programs mean — semantics is what turns compilation into something you can verify."
+  body: "Trusthworthy compilation a precise, compositional account of what programs mean. Semantics provides this formal grounding and makes compilation into something you can verify."
   subobjectives:
     - text: "Denotational semantics for stabiliser quantum programs"
       done: true
@@ -61,7 +61,7 @@
 - icon: phasespace
   title: "Continuous variables & bosonic systems"
   question: "How do we reason about infinite-dimensional quantum systems?"
-  body: "Bosonic systems are infinite-dimensional — yet computation, non-classicality, and error correction all make sense there, and increasingly in hardware."
+  body: "Bosonic systems are infinite-dimensional in which computation, non-classicality, and error correction all make sense. Hardware is being designed around these computational models, but the theoretical tools to reason about them are nowhere near as developped as for qubits."
   subobjectives:
     - text: "Flow & determinism for CV measurement-based computation"
       done: true
