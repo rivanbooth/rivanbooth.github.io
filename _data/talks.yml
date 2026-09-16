@@ -1,6 +1,12 @@
 # Talks. Newest first. Add a new entry at the TOP.
 # tags: pick one venue type (conference/workshop/seminar) + any topics from _data/tags.yml
 
+- date: "Sep 2026"
+  title: "Towards semantics for fault-tolerant quantum compilation"
+  venue: "RubberDUQ workshop"
+  tags: [workshop, semantics, stabiliser, faulttol]
+  slides: "2026-09-RubberDUQ_fault-tolerant-compilation.pdf"
+
 - date: "Jul 2026"
   title: "Denotational semantics for stabiliser quantum programs"
   venue: "FSCD 2026"
