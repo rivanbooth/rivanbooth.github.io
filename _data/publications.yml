@@ -6,7 +6,7 @@
   title: "Denotational semantics for stabiliser quantum programs"
   authors: "Robert I. Booth, Cole Comfort"
   venue: "FSCD 2026"
-  url: "https://arxiv.org/abs/2511.22734"
+  url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2026.8"
   blurb: "What stabiliser quantum programs mean, compositionally."
   tags: [semantics, stabiliser, faulttol]
   status: peer-reviewed
@@ -15,7 +15,7 @@
   title: "Graphical Symplectic Algebra"
   authors: "Robert I. Booth, Titouan Carette, Cole Comfort"
   venue: "FSCD 2026"
-  url: "http://arxiv.org/abs/2401.07914"
+  url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSCD.2026.7"
   blurb: "A graphical calculus built on symplectic structure, spanning stabiliser and Gaussian quantum mechanics."
   tags: [graphical, algebra, stabiliser, cv]
   status: peer-reviewed
