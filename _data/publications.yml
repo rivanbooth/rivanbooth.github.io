@@ -34,7 +34,7 @@
   authors: "Robert I. Booth, Damian Markham"
   venue: "Quantum · 2023"
   url: "https://quantum-journal.org/papers/q-2023-10-19-1146/"
-  blurb: "When continuous-variable measurement patterns define deterministic computations."
+  blurb: "Generalising flow conditions for determinism to continuous-variable measurement-based computation."
   tags: [mbqc, cv]
   status: peer-reviewed
 
@@ -52,7 +52,7 @@
   authors: "Robert I. Booth, Aleks Kissinger, Damian Markham, Clément Meignant, Simon Perdrix"
   venue: "J. Phys. A · 2023"
   url: "https://dx.doi.org/10.1088/1751-8121/acbace"
-  blurb: "Generalising flow-based determinism to qudit measurement-based computation."
+  blurb: "Generalising flow conditions for determinism to qudit measurement-based computation."
   tags: [mbqc, stabiliser]
   status: peer-reviewed
 
@@ -95,7 +95,7 @@
   authors: "Robert I. Booth, Dominik Leichtle, Alex Rice, Kim Worrall"
   venue: "arXiv:2606.28291"
   url: "https://arxiv.org/abs/2606.28291"
-  blurb: "The compositional structure of quantum operations with classical input and output."
+  blurb: "The compositional structure of infinite-dimensional quantum operations with classical input and output."
   tags: [semantics, algebra]
   status: preprint
 
@@ -122,6 +122,6 @@
   authors: "Robert I. Booth, Titouan Carette, Cole Comfort"
   venue: "arXiv:2403.10479"
   url: "http://arxiv.org/pdf/2403.10479"
-  blurb: "A complete graphical calculus for the Gaussian, continuous-variable world."
+  blurb: "The first complete graphical calculus for a fragment of infinite-dimensional quantum mechanics."
   tags: [graphical, algebra, cv]
   status: preprint
